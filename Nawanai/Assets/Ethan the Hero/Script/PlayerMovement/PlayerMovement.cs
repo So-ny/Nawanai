@@ -204,5 +204,6 @@ namespace EthanTheHero
 			transform.localScale = tem;
 		}
 		#endregion
+
 	}
 }

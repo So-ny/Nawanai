@@ -13,6 +13,11 @@ namespace EthanTheHero
 		private Animator myAnim;
 		private Rigidbody2D myBody;
 
+		public GameObject attackPoint;
+		public float radius;
+		public LayerMask enemies;
+		public float damage;
+
 
 		[Header("Basic Attack")]
 		public float basicAttack01Power = 0.5f;
@@ -157,13 +162,22 @@ namespace EthanTheHero
 
 		#endregion
 
-		private void OnCollisionEnter2D(Collision2D col)
+
+		public void attack()
         {
-			if (col.gameObject.tag == "Enemies")
+			Collider2D[] enemy = Physics2D.OverlapCircleAll(attackPoint.transform.position, radius, enemies);
+
+			foreach(Collider2D enemyGameObject in enemy)
             {
-				Destroy(col.gameObject);
+				enemyGameObject.GetComponent<EnemyHealth>().health -= damage;
             }
         }
+
+		public void OnDrawGizmos()
+        {
+			Gizmos.DrawWireSphere(attackPoint.transform.position, radius);
+        }
+
 
 	}
 }
