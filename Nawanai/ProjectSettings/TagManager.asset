@@ -8,6 +8,7 @@ TagManager:
   - Enemies
   - Weapon
   - Platform
+  - Logic
   layers:
   - Default
   - TransparentFX
