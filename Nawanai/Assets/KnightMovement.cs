@@ -9,6 +9,8 @@ public class KnightMovement : MonoBehaviour
     public float runSpeed = 40f;
     float horizontalMove = 0f;
     bool jump = false;
+    public LogicScript logic;
+
     //bool crouch = false;
 
     
@@ -16,7 +18,7 @@ public class KnightMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();
     }
 
     // Update is called once per frame
@@ -56,6 +58,18 @@ public class KnightMovement : MonoBehaviour
     {
         controller.Move(horizontalMove * Time.fixedDeltaTime, jump);
         jump = false;
+        
+    }
+
+    private void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.tag == "Enemies")
+        {
+            Destroy(gameObject);
+            logic.gameOver();
+        }
+        
+
         
     }
 }

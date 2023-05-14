@@ -26,7 +26,15 @@ public class EnemyHealth : MonoBehaviour
         if (health <= 0)
         {
             anim.SetBool("isDead", true);
+            this.enabled = false;
         }
+
+        if(this.enabled == false)
+        {
+            Destroy(gameObject);
+        }
+
+        
 
     }
 
