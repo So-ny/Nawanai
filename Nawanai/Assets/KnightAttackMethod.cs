@@ -22,6 +22,7 @@ public class KnightAttackMethod : MonoBehaviour
             {
                 Attack();
                 nextAttackTime = Time.time +  attackRate;
+                Debug.Log("Hello");
             }
         }
         
