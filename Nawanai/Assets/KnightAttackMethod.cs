@@ -10,14 +10,21 @@ public class KnightAttackMethod : MonoBehaviour
 	public float radius;
 	public LayerMask enemies;
 	public float damage;
+    public float attackRate = 2f;
+    float nextAttackTime = 0f;
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown("j"))
+        if(Time.time >= nextAttackTime)
         {
-            Attack();
+            if(Input.GetKeyDown("j"))
+            {
+                Attack();
+                nextAttackTime = Time.time +  attackRate;
+            }
         }
+        
     }
 
     void Attack()
