@@ -23,19 +23,18 @@ public class EnemyMovement : MonoBehaviour
             transform.localScale = new Vector2(-1,1);
 
         }
-
+ 
         if(Time.time >= nextTurnTime)
         {
             if(MoveRight)
             {
                 MoveRight = false;
-                nextTurnTime = Time.time + turnRate;
             }
             else 
             {
                 MoveRight = true;
-                nextTurnTime = Time.time + turnRate;
-            }
+            }  
+            nextTurnTime = Time.time + turnRate;          
         }
         if(GetComponent<EnemyHealth>().health <= 0)
         {
