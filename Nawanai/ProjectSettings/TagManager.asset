@@ -9,6 +9,7 @@ TagManager:
   - Weapon
   - Platform
   - Logic
+  - Turn
   layers:
   - Default
   - TransparentFX
