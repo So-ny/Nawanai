@@ -10,6 +10,7 @@ public class KnightMovement : MonoBehaviour
     float horizontalMove = 0f;
     bool jump = false;
     public LogicScript logic;
+    Rigidbody2D myRigid2D;
 
     //bool crouch = false;
 
@@ -65,6 +66,9 @@ public class KnightMovement : MonoBehaviour
     {
         if (col.gameObject.tag == "Enemies")
         {
+            //myRigid2D.isKinematic = true;
+            GetComponent<Collider2D>().enabled = false;
+            this.enabled = false;
             Destroy(gameObject);
             logic.gameOver();
         }
