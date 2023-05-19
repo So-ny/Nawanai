@@ -56,10 +56,10 @@ public class Enemy_jump : MonoBehaviour
         if(GetComponent<EnemyHealth>().health <= 0)
         {
             speed = 0f;
+            //rb.isKinematic = true;
+            jumpForce = 0f;
+            rb.AddForce(Vector3.up * jumpForce, ForceMode2D.Impulse);
+            //jumpRate = 0f;
         }
-    }
-    void FixedUpdate()
-    {
-
     }
 }
