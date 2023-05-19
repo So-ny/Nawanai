@@ -2086,7 +2086,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 1918771945}
   attackPoint: {fileID: 1353989213}
-  radius: 0.43
+  radius: 0.5
   enemies:
     serializedVersion: 2
     m_Bits: 64
