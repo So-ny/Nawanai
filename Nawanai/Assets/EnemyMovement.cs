@@ -42,18 +42,11 @@ public class EnemyMovement : MonoBehaviour
         }
     }
 
-    /*private void OnTriggerEnter2D(Collider2D col)
+    void OnTriggerEnter2D(Collider2D col)
     {
-        if(col.gameObject.CompareTag("Turn"))
+        if(col.gameObject.tag == "Border")
         {
-            if(MoveRight)
-            {
-                MoveRight = false;
-            }
-            else 
-            {
-                MoveRight = true;
-            }
+            
         }
-    }*/
+    }
 }

@@ -62,4 +62,21 @@ public class Enemy_jump : MonoBehaviour
             //jumpRate = 0f;
         }
     }
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if(col.gameObject.tag == "Border")
+        {
+            if(MoveRight)
+            {
+                transform.Translate(2 * Time.deltaTime * speed, 0,0);
+                transform.localScale = new Vector2(1,1);
+            }
+            else
+            {
+                transform.Translate(-2 * Time.deltaTime * speed, 0,0);
+                transform.localScale = new Vector2(-1,1);
+
+            }
+        }
+    }
 }
