@@ -46,7 +46,14 @@ public class EnemyMovement : MonoBehaviour
     {
         if(col.gameObject.tag == "Border")
         {
-            
+            if(MoveRight)
+            {
+                MoveRight = false;
+            }
+            else 
+            {
+                MoveRight = true;
+            }
         }
     }
 }

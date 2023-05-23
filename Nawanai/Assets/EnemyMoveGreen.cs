@@ -73,16 +73,11 @@ public class EnemyMoveGreen : MonoBehaviour
         {
             if(MoveRight)
             {
-                Debug.Log("hit");
-                transform.Translate(2 * Time.deltaTime * speed, 0,0);
-                transform.localScale = new Vector2(1,1);
+                MoveRight = false;
             }
-            else
+            else 
             {
-                Debug.Log("Hit2");
-                transform.Translate(-2 * Time.deltaTime * speed, 0,0);
-                transform.localScale = new Vector2(-1,1);
-
+                MoveRight = true;
             }
         }
     }

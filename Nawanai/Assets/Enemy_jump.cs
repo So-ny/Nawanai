@@ -68,14 +68,11 @@ public class Enemy_jump : MonoBehaviour
         {
             if(MoveRight)
             {
-                transform.Translate(2 * Time.deltaTime * speed, 0,0);
-                transform.localScale = new Vector2(1,1);
+                MoveRight = false;
             }
-            else
+            else 
             {
-                transform.Translate(-2 * Time.deltaTime * speed, 0,0);
-                transform.localScale = new Vector2(-1,1);
-
+                MoveRight = true;
             }
         }
     }
