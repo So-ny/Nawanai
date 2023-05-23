@@ -10,6 +10,7 @@ TagManager:
   - Platform
   - Logic
   - Turn
+  - Border
   layers:
   - Default
   - TransparentFX
