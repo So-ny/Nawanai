@@ -60,49 +60,13 @@ public class CharacterController2D : MonoBehaviour
 	}
 
 
-	public void Move(float move, bool jump) //bool crouch, bool jump)
+	public void Move(float move, bool jump)
 	{
 		
-		/*if (!crouch)
-		{
-			
-			if (Physics2D.OverlapCircle(m_CeilingCheck.position, k_CeilingRadius, m_WhatIsGround))
-			{
-				crouch = true;
-			}
-		}*/
 
 		
 		if (m_Grounded || m_AirControl)
 		{
-
-			
-			/*if (crouch)
-			{
-				if (!m_wasCrouching)
-				{
-					m_wasCrouching = true;
-					OnCrouchEvent.Invoke(true);
-				}
-
-				
-				move *= m_CrouchSpeed;
-
-				
-				if (m_CrouchDisableCollider != null)
-					m_CrouchDisableCollider.enabled = false;
-			} else
-			{
-				
-				if (m_CrouchDisableCollider != null)
-					m_CrouchDisableCollider.enabled = true;
-
-				if (m_wasCrouching)
-				{
-					m_wasCrouching = false;
-					OnCrouchEvent.Invoke(false);
-				}
-			}*/
 
 			
 			Vector3 targetVelocity = new Vector2(move * 10f, m_Rigidbody2D.velocity.y);

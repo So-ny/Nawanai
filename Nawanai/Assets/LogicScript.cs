@@ -17,4 +17,5 @@ public class LogicScript : MonoBehaviour
    {
         gameOverScreen.SetActive(true);
    }
+
 }

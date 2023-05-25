@@ -35,14 +35,6 @@ public class KnightMovement : MonoBehaviour
             anim.SetBool("isJumping", true);
         }
 
-       /* if(Input.GetButtonDown("Crouch"))
-        {
-            crouch = true;
-        }
-        else if(Input.GetButtonUp("Crouch"))
-        {
-            crouch = false;
-        }*/
     }
 
     public void OnLanding()
@@ -50,10 +42,7 @@ public class KnightMovement : MonoBehaviour
         anim.SetBool("isJumping", false);
     }
 
-    /*public void OnCrounching(bool isCrouching)
-    {
-        anim.SetBool("isCrouching", isCrouching);
-    }*/
+
 
     void FixedUpdate()
     {

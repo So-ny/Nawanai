@@ -11,6 +11,7 @@ TagManager:
   - Logic
   - Turn
   - Border
+  - Boss
   layers:
   - Default
   - TransparentFX
