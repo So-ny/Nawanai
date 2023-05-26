@@ -49,14 +49,15 @@ public class Enemy_jump : MonoBehaviour
             }
             nextTurnTime = Time.time + turnRate;
         }
-        if((Time.time >= nextJumpTime) && GetComponent<EnemyHealth>().health > 0)
+        if((Time.time >= nextJumpTime) && GetComponent<BossHealth>().health > 0)
         {
             rb.AddForce(Vector3.up * jumpForce, ForceMode2D.Impulse);
             nextJumpTime = Time.time + jumpRate;
         }
-        if(GetComponent<EnemyHealth>().health <= 0)
+        if(GetComponent<BossHealth>().health <= 0)
         {
             speed = 0f;
+            nextJumpTime = 0f;
         }
     }
     void OnTriggerEnter2D(Collider2D col)
@@ -73,4 +74,5 @@ public class Enemy_jump : MonoBehaviour
             }
         }
     }
+
 }
