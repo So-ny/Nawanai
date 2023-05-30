@@ -38,15 +38,7 @@ public class KnightAttackMethod : MonoBehaviour
 
 		foreach(Collider2D enemyGameObject in enemy)
         {
-            if(enemyGameObject.tag == "Enemies")
-            {
-                enemyGameObject.GetComponent<EnemyHealth>().health -= damage;
-
-            }
-            else 
-            {
-                enemyGameObject.GetComponent<BossHealth>().health -= damage;
-            }            
+			enemyGameObject.GetComponent<EnemyHealth>().health -= damage;
         }
     }
 

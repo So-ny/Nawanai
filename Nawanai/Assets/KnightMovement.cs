@@ -53,7 +53,7 @@ public class KnightMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.gameObject.tag == "Enemies" || col.gameObject.tag == "Boss")
+        if (col.gameObject.tag == "Enemies")
         {
             //myRigid2D.isKinematic = true;
             GetComponent<Collider2D>().enabled = false;
